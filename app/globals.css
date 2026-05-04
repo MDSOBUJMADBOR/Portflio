@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-blue: #3B5BFC;
+  --color-blue-light: #5B78FF;
+  --color-blue-dark: #2A42D8;
+  --color-dark: #0F1221;
+  --color-dark-2: #161A2E;
+  --color-dark-3: #1E2340;
+  --color-accent: #00E5FF;
+  --color-green: #22C55E;
+  
+  --font-syne: "Syne", sans-serif;
+  --font-dm: "DM Sans", sans-serif;
+}
+
+
+
+
+@layer base {
+  :root {
+    --background: #F4F6FF;
+    --foreground: #1E2340;
+    --nav-bg: #0B0E1A;
+  }
+
+  .dark {
+    --background: #0F1221;
+    --foreground: #E2E8FF;
+    --nav-bg: #161A2E;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-dm);
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background-color: rgb(255 255 255 / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgb(255 255 255 / 0.1);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue to-accent;
+  }
+}
+
