@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
           defaultTheme="dark"   // 🔥 important
           enableSystem={false}  // 🔥 avoid bug
         >
-          <LenisProvider>
+          <LenisProvider>            
             {children}
           </LenisProvider>
         </ThemeProvider>

@@ -76,12 +76,13 @@ export default function About() {
           transition={{ delay: 0.2 }}
         >
           <div className="text-blue font-bold text-xs uppercase tracking-[3px] mb-4">About Me</div>
-          <h2 className="about-title font-syne text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold leading-tight mb-6 text-dark dark:text-white">
+          {/* <h2 className="about-title font-syne text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold leading-tight mb-6 text-dark dark:text-white">
             Crafting digital experiences that make an <span className="text-blue border-b-4 border-blue/20">impact</span>
-          </h2>
-          <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">
-            I'm a dedicated Web Developer with a passion for building high-quality, performant web applications. I specialize in creating seamless user experiences with modern technologies and best practices.
+          </h2> */}
+          <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8 text-justify">
+            I am a Junior Full-Stack Developer with a strong passion for building modern, responsive, and user-friendly web applications. My journey started with curiosity about how websites work, which led me to learn HTML and CSS, and gradually move into JavaScript, React, and Next.js. I am now expanding my skills toward full-stack development.
           </p>
+          {/* <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">I enjoy creating clean UI designs and solving real-world problems through code. I am especially interested in frontend development, where I can combine logic and creativity to build smooth and interactive user experiences.</p> */}
 
           <div className="flex flex-wrap gap-3 mb-10">
             {["⚡ Clean Code", "🎯 Pixel Perfect", "📱 Responsive", "🚀 Performance"].map((tag) => (
@@ -109,6 +110,11 @@ export default function About() {
             </a>
           </div>
         </motion.div>
+
+
+
+
+
 
         {/* Right Column: Info List */}
         <motion.div

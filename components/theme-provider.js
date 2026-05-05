@@ -7,7 +7,7 @@ export function ThemeProvider({ children, ...props }) {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
+    setMounted(true) 
   }, [])
 
   if (!mounted) {
