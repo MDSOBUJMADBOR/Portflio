@@ -85,7 +85,7 @@ export default function About() {
           {/* <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">I enjoy creating clean UI designs and solving real-world problems through code. I am especially interested in frontend development, where I can combine logic and creativity to build smooth and interactive user experiences.</p> */}
 
           <div className="flex flex-wrap gap-3 mb-10">
-            {["⚡ Clean Code", "🎯 Pixel Perfect", "📱 Responsive", "🚀 Performance"].map((tag) => (
+            {["⚡ Clean Code", "🎯 Pixel Perfect", "📱 Responsive", "🚀 Performance","Problem Solving","UI/UX Design",].map((tag) => (
               <span
                 key={tag}
                 className="px-4 py-2 rounded-full bg-blue/5 dark:bg-blue/10 border border-blue/10 text-blue font-bold text-xs flex items-center gap-2"
