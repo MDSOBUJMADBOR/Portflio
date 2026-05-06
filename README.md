@@ -15,6 +15,11 @@ I focus on clean UI design, smooth user experience, and performance optimization
 - 🚀 Currently learning full-stack development  
 
 ---
+## 🌐 Social
+
+- Portfolio:https://sobuj-madbor-portflio.vercel.app
+
+
 
 ## 🛠️ Tech Stack
 
@@ -97,10 +102,7 @@ Personal portfolio to showcase skills & projects
 
 ---
 
-## 🌐 Social
 
-- GitHub: https://github.com/your-username  
-- Portfolio: https://your-portfolio-link.com  
 
 ---
 
