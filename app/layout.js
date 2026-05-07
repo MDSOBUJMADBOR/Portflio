@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
         >
           <LenisProvider>            
             {children}
-          </LenisProvider>
+          </LenisProvider>  
         </ThemeProvider>
       </body>
     </html>

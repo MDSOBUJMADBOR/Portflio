@@ -185,7 +185,7 @@ export default function Navbar() {
       <div className="flex items-center gap-3">
 
         {/* 🌙 Theme Toggle (FIXED) */}
-        <button
+         <button
           onClick={() =>
             setTheme(theme === "dark" ? "light" : "dark")
           }
@@ -196,7 +196,9 @@ export default function Navbar() {
           ) : (
             <Moon size={20} />
           )}
-        </button>
+        </button> 
+        
+        
 
         {/* Mobile Menu */}
         <button
