@@ -14,20 +14,20 @@ const projects = [
     githubUrl: "https://github.com/MDSOBUJMADBOR/Portflio",
   },
   {
-    title: "E-commerce Website",
+    title: "Pixgen",
     desc: "A full-stack e-commerce website built with the MERN stack.",
-    tags: ["React", "Node.js", "MongoDB", "Express.js"],
-    image: "/project1.jpg",
+    tags: ["Tailwind CSS","React", "Next.js", "MongoDB"],
+    image: "/exjen.png",
     liveUrl: "https://pixgen-next-js.vercel.app",
-    githubUrl: "https://github.com/your-repo",
+    githubUrl: "https://github.com/MDSOBUJMADBOR/Pixgen-next.js",
   },
   {
-    title: "Task Management App",
+    title: "Tile Gallery",
     desc: "A task management application to organize tasks and boost productivity.",
-    tags: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
-    image: "/project2.jpg",
+    tags: ["Tailwind CSS", "React", "Node.js", "MongoDB","Next.js"],
+    image: "/gallery.png",
     liveUrl: "https://tiles-gallery-next.vercel.app",
-    githubUrl: "https://github.com/your-repo",
+    githubUrl: "https://github.com/MDSOBUJMADBOR/Tiles-gallery-next",
   },
 ]
 
