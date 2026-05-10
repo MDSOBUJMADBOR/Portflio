@@ -3,7 +3,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
+ 
 @theme {
   --color-blue: #3B5BFC;
   --color-blue-light: #5B78FF;
