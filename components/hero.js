@@ -40,8 +40,8 @@ export default function Hero() {
       className="relative min-h-screen pt-28 pb-12 lg:pt-32 lg:pb-20 flex items-center px-[5%] bg-gradient-to-br from-[#F0F3FF] via-[#E8EDFF] to-[#F4F6FF] dark:from-[#0F1221] dark:via-[#161A2E] dark:to-[#0B0E1A] overflow-visible"
     >
       {/* Background Decors */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue/10 dark:bg-blue/5 rounded-full blur-[120px] -z-10" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/10 dark:bg-accent/5 rounded-full blur-[100px] -z-10" />
+      <div className="absolute top-0 right-0 max-w-[600px] max-h-[600px] bg-blue/10 dark:bg-blue/5 rounded-full blur-[120px] -z-10" />
+      <div className="absolute bottom-0 left-0 max-w-[400px] max-h-[400px] bg-accent/10 dark:bg-accent/5 rounded-full blur-[100px] -z-10" />
 
       <div className="container mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 

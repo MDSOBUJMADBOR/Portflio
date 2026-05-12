@@ -45,7 +45,7 @@ export default function Navbar() {
   if (!mounted) return null
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0B0E1A]/80 backdrop-blur-md border-b border-gray-200 dark:border-white/5 h-[68px] px-6 md:px-8 flex items-center justify-between transition-colors duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0B0E1A]/80 backdrop-blur-md border-b border-gray-200 dark:border-white/5 h-[68px] px-6 md:px-8 flex items-center justify-between transition-colors duration-300 max-w-full">
       
       {/* Logo */}
       <div className="w-[38px] h-[38px] rounded-xl bg-gradient-to-br from-blue to-[#7B68FF] flex items-center justify-center text-white shadow-lg shadow-blue/20">
