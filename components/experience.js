@@ -7,28 +7,28 @@ const experiences = [
   {
     role: "Web Development Student",
     company: "Programming Hero",
-    period: "2025 — Present",
+    period: "2026 — Present",
   },
   {
     role: "Frontend Practice Developer",
     company: "Personal Learning Projects",
-    period: "2023 — 2025",
+    period: "2024 — 2025",
   },
   {
     role: "Beginner Web Learner",
     company: "Self Learning (HTML & CSS)",
-    period: "2022 — 2023",
+    period: "2023 — 2024",
   },
 ];
 
 const ExperiencePage = () => {
   return (
-    <div className="max-w-5xl mx-auto px-5 md:px-0">
+    <div className="max-w-5xl mx-auto px-5 md:px-0 ">
 
       {/* Title */}
       <div className="flex items-center gap-3 mb-8">
         <div className="w-1 h-8 bg-indigo-600 rounded-full" />
-        <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
+        <h2 className="text-2xl font-bold text-gray-800 ">
           Experience
         </h2>
       </div>
@@ -40,7 +40,7 @@ const ExperiencePage = () => {
         viewport={{ once: true }}
         className="hidden md:block rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10"
       >
-        <table className="w-full">
+        <table className="w-full ">
           <thead className="bg-gray-100 dark:bg-dark-3">
             <tr>
               <th className="text-left px-6 py-4 text-xs font-bold uppercase text-indigo-600">
