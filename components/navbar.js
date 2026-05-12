@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Moon, Sun, Menu, X, Layers } from "lucide-react"
-import { useTheme } from "next-themes"
+import { Menu, X, Layers } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
@@ -16,7 +15,6 @@ const navLinks = [
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
   const [activeSection, setActiveSection] = useState("home")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -48,7 +46,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0B0E1A]/80 backdrop-blur-md border-b border-gray-200 dark:border-white/5 h-[68px] px-6 md:px-8 flex items-center justify-between transition-colors duration-300 max-w-full">
       
       {/* Logo */}
-      <div className="w-[38px] h-[38px] rounded-xl bg-gradient-to-br from-blue to-[#7B68FF] flex items-center justify-center text-white shadow-lg shadow-blue/20">
+      <div className=" w-[38px] h-[38px] rounded-xl bg-gradient-to-br from-blue to-[#7B68FF] flex items-center justify-center text-white shadow-lg shadow-blue/20 ">
         <Layers size={20} strokeWidth={2.5} />
       </div>
 
@@ -73,13 +71,6 @@ export default function Navbar() {
       {/* Right Side */}
       <div className="flex items-center gap-3">
 
-        {/* 🌙 Theme Toggle */}
-        {/* <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="w-10 h-10 rounded-full flex items-center justify-center text-gray-500 dark:text-[#7A849E] hover:text-blue dark:hover:text-white transition-all duration-300"
-        >
-          {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-        </button> */}
 
         {/* Mobile Menu Button */}
         <button

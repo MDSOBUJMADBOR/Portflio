@@ -67,22 +67,9 @@ export default function Hero() {
               Web Developer
             </div>
             <h1 className="font-syne text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-[1.05] mb-4 text-dark dark:text-white">
-              Hi, I'm <span className="text-blue">SOBUJ MADBOR</span>
-              {/* <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?
-font=Fira+Code&weight=600&size=28&pause=1000&color=00F5FF&center=true&vCenter=true&width=500&lines=Hi+there,+;I'm+MD.+SOBUJ+MADBOR+👋" 
-  alt="Typing SVG" />
-</a> */}
+              Hi , I'm <span className="text-blue">SOBUJ MADBOR</span>
             </h1>
-            {/* <h2 className="font-syne text-[clamp(1.2rem,2.5vw,1.8rem)] font-bold text-dark-3 dark:text-gray-300">
-              I build modern, responsive websites & web applications
-            </h2> */}
-
-{/* <a className="" href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?
-font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&width=600&lines=MERN+Stack+Developer;Problem+Solver;Advanced+React+%26+Node.js" 
-  alt="Typing SVG" />
-</a> */}
+   
 <a href="https://git.io/typing-svg">
   <img
     src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=28&pause=1000&color=0000FF&center=false&vCenter=false&width=600&lines=MERN+Stack+Developer;Problem+Solver;Advanced+React+%26+Node.js"
@@ -192,17 +179,7 @@ font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&wi
 
 
 
-
-
-
-
-
-
-
-
-
-
-<div className="mt-8">
+<div className="mt-8 md:hidden">
       <Marquee speed={60} pauseOnHover={true} gradient={false}>
         
         <div className="flex gap-4 items-center">
@@ -253,15 +230,6 @@ font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&wi
 
       </Marquee>
     </div>
-
-
-
-
-
-
-
-
-
 
 
           </div>
