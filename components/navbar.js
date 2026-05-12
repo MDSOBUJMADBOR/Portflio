@@ -74,12 +74,12 @@ export default function Navbar() {
       <div className="flex items-center gap-3">
 
         {/* 🌙 Theme Toggle */}
-        <button
+        {/* <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="w-10 h-10 rounded-full flex items-center justify-center text-gray-500 dark:text-[#7A849E] hover:text-blue dark:hover:text-white transition-all duration-300"
         >
           {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-        </button>
+        </button> */}
 
         {/* Mobile Menu Button */}
         <button
@@ -92,7 +92,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="absolute top-[68px] left-0 right-0 bg-white dark:bg-[#0B0E1A] border-b border-gray-200 dark:border-white/10 p-6 flex flex-col gap-2 md:hidden animate-in slide-in-from-top duration-300">
+        <div className="absolute top-[68px] left-0 right-0 bg-white dark:bg-[#0B0E1A] border-b border-gray-200 dark:border-white/10 p-6 flex flex-col gap-2 md:hidden animate-in slide-in-from-top duration-300 text-center">
           {navLinks.map((link) => (
             <a
               key={link.name}

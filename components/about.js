@@ -39,7 +39,7 @@ export default function About() {
     }, sectionRef)
 
     return () => ctx.revert()
-  }, [])
+  }, []) 
 
   return (
     <section id="about" ref={sectionRef} className="py-24 px-[5%] bg-white dark:bg-dark overflow-hidden">

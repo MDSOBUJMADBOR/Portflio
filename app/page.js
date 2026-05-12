@@ -8,7 +8,7 @@ import Projects from "@/components/projects"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import ExperiencePage from "@/components/experience"
-import Navbar2 from "@/components/Navbar2"
+
 
 export default function Home() {
   return (

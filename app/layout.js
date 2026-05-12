@@ -63,11 +63,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
+    <html lang="en" data-theme="light" suppressHydrationWarning>
+      <body >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"   // 🔥 important
+          
           enableSystem={false}  // 🔥 avoid bug
         >
           <LenisProvider>            

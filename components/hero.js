@@ -130,7 +130,7 @@ font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&wi
             <div className="absolute inset-0 bg-blue/30 dark:bg-blue/20 rounded-[40px] blur-[80px] animate-pulse" />
             
             {/* Image Container - Now Rectangular */}
-            <div className="relative w-full h-full bg-[#111827] rounded-[40px] border-4 border-white/10 dark:border-white/5 overflow-hidden shadow-2xl">
+            <div className="relative  md:w-full md:h-full bg-[#111827] rounded-[40px] border-4 border-white/10 dark:border-white/5 overflow-hidden shadow-2xl">
               <img 
                 src="/profile.png" 
                 alt="SOBUJ MADBOR" 
@@ -147,8 +147,8 @@ font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&wi
                 "top-[-30px] right-[-30px]",   // React
                 "bottom-[-30px] left-[-30px]",  // JS
                 "bottom-[-30px] right-[-30px]", // CSS3
-                "top-1/2 left-[-70px] -translate-y-1/2", // Next.js
-                "top-1/2 right-[-70px] -translate-y-1/2", // MongoDB
+                "top-1/2 left-[-70px] -translate-y-1/2 ", // Next.js
+                "top-1/2 right-[-70px] -translate-y-1/2 hidden md:block", // MongoDB
                 "bottom-[-60px] left-1/2 -translate-x-1/2", // Tailwind
               ];
               
