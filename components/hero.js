@@ -144,9 +144,9 @@ font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&wi
               // Recalculated positions for better balance around the rectangle
               const positions = [
                 "top-[-30px] left-[-30px]",    // HTML5
-                "top-[-30px] right-[-30px]",   // React
+                "top-[-30px] right-[-30px] hidden md:block",   // React
                 "bottom-[-30px] left-[-30px]",  // JS
-                "bottom-[-30px] right-[-30px]", // CSS3
+                "bottom-[-30px] right-[-30px] hidden md:block", // CSS3
                 "top-1/2 left-[-70px] -translate-y-1/2 ", // Next.js
                 "top-1/2 right-[-70px] -translate-y-1/2 hidden md:block", // MongoDB
                 "bottom-[-60px] left-1/2 -translate-x-1/2", // Tailwind
