@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowRight, MousePointer2, Link as LinkIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Facebook } from "@/lib/brand-icons"
 
 
 const Github = (props) => (
@@ -17,7 +18,8 @@ const Linkedin = (props) => (
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/MDSOBUJMADBOR", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/md-sobuj-madbor/", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/md-sobuj-madbor", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/share/1PDgKKfk12/", label: "Facebook" },
   
   
 ]

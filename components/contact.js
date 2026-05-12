@@ -47,7 +47,7 @@ export default function Contact() {
     },
     {
       icon: Facebook,
-      url: "https://www.facebook.com/your-facebook-username",
+      url: "https://www.facebook.com/share/1PDgKKfk12/",
     },
   ]
 
