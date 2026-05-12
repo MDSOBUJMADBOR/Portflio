@@ -125,7 +125,7 @@ font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&wi
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative flex justify-center lg:justify-end"
         >
-          <div className="relative w-[340px] sm:w-[400px] aspect-[4/5]">
+          <div className="relative max-w-[340px] sm:w-[400px] aspect-[4/5]">
             {/* Background Glow */}
             <div className="absolute inset-0 bg-blue/30 dark:bg-blue/20 rounded-[40px] blur-[80px] animate-pulse" />
             
@@ -144,9 +144,9 @@ font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&wi
               // Recalculated positions for better balance around the rectangle
               const positions = [
                 "top-[-30px] left-[-30px]",    // HTML5
-                "top-[-30px] right-[-30px] hidden md:block",   // React
+                "top-[-30px] right-[-30px] ",   // React
                 "bottom-[-30px] left-[-30px]",  // JS
-                "bottom-[-30px] right-[-30px] hidden md:block", // CSS3
+                "bottom-[-30px] right-[-30px] ", // CSS3
                 "top-1/2 left-[-70px] -translate-y-1/2 ", // Next.js
                 "top-1/2 right-[-70px] -translate-y-1/2 hidden md:block", // MongoDB
                 "bottom-[-60px] left-1/2 -translate-x-1/2", // Tailwind
