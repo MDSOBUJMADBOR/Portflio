@@ -4,6 +4,9 @@ import { motion } from "framer-motion"
 import { ArrowRight, MousePointer2, Link as LinkIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Facebook } from "@/lib/brand-icons"
+import Marquee from "react-fast-marquee"
+import { FaReact, FaNodeJs, FaJs, FaGitAlt } from "react-icons/fa"
+import { SiNextdotjs, SiMongodb, SiTailwindcss } from "react-icons/si"
 
 
 const Github = (props) => (
@@ -54,6 +57,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="relative z-10 space-y-8"
         >
+
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-blue/10 border border-blue/20 text-blue font-bold text-xs uppercase tracking-widest">
               <span className="relative flex h-2 w-2">
@@ -185,6 +189,80 @@ font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&wi
 
               );
             })}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="mt-8">
+      <Marquee speed={60} pauseOnHover={true} gradient={false}>
+        
+        <div className="flex gap-4 items-center">
+
+          {/* React */}
+          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-blue-500/10 text-blue-500 border border-blue-500/20 font-semibold hover:bg-blue-500 hover:text-white transition-all">
+            <FaReact size={20} />
+            React
+          </div>
+
+          {/* Next.js */}
+          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-black/10 text-black dark:text-white border border-black/20 font-semibold hover:bg-black hover:text-white transition-all">
+            <SiNextdotjs size={18} />
+            Next.js
+          </div>
+
+          {/* Node.js */}
+          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-green-500/10 text-green-600 border border-green-500/20 font-semibold hover:bg-green-500 hover:text-white transition-all">
+            <FaNodeJs size={20} />
+            Node.js
+          </div>
+
+          {/* MongoDB */}
+          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 font-semibold hover:bg-emerald-500 hover:text-white transition-all">
+            <SiMongodb size={18} />
+            MongoDB
+          </div>
+
+          {/* Tailwind */}
+          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-cyan-500/10 text-cyan-600 border border-cyan-500/20 font-semibold hover:bg-cyan-500 hover:text-white transition-all">
+            <SiTailwindcss size={18} />
+            Tailwind
+          </div>
+
+          {/* JavaScript */}
+          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-yellow-500/10 text-yellow-600 border border-yellow-500/20 font-semibold hover:bg-yellow-500 hover:text-black transition-all">
+            <FaJs size={18} />
+            JavaScript
+          </div>
+
+          {/* Git */}
+          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-orange-500/10 text-orange-600 border border-orange-500/20 font-semibold hover:bg-orange-500 hover:text-white transition-all">
+            <FaGitAlt size={18} />
+            Git
+          </div>
+
+        </div>
+
+      </Marquee>
+    </div>
+
+
+
+
+
+
+
+
+
+
 
           </div>
         </motion.div>
