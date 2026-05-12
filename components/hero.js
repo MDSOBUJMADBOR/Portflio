@@ -72,12 +72,17 @@ font=Fira+Code&weight=600&size=28&pause=1000&color=00F5FF&center=true&vCenter=tr
               I build modern, responsive websites & web applications
             </h2> */}
 
-<a className="text-start" href="https://git.io/typing-svg">
+{/* <a className="" href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?
 font=Syne&weight=700&size=28&pause=1000&color=111111&center=true&vCenter=true&width=600&lines=MERN+Stack+Developer;Problem+Solver;Advanced+React+%26+Node.js" 
   alt="Typing SVG" />
+</a> */}
+<a href="https://git.io/typing-svg">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=28&pause=1000&color=0000FF&center=false&vCenter=false&width=600&lines=MERN+Stack+Developer;Problem+Solver;Advanced+React+%26+Node.js"
+    alt="Typing SVG"
+  />
 </a>
-
 
 
 
