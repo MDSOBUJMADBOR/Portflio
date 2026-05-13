@@ -117,7 +117,7 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="flex items-center gap-2 px-10 py-4 bg-blue hover:bg-blue-dark text-white rounded-2xl font-bold transition-all duration-300 shadow-lg shadow-blue/20 hover:scale-[1.05] active:scale-95"
+            className="flex items-center gap-2 px-10 py-4 bg-blue hover:bg-blue-dark text-white rounded-2xl font-bold transition-all duration-300 shadow-lg shadow-blue/20 hover:scale-[1.05] active:scale-95 cursor-pointer"
           >
             Send Message <Send size={18} />
           </button>

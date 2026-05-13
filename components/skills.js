@@ -9,6 +9,7 @@ const progressSkills = [
   { name: "Next.js", pct: 80},
   { name: "Node.js", pct: 85 },
   { name: "Express.js", pct: 81 },
+  { name: "Mongodb", pct: 78 },
 ]
 
 const circularSkills = [
