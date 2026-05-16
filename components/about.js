@@ -6,8 +6,14 @@ import { cn } from "@/lib/utils"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { Roboto } from "next/font/google";
 
+  const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 gsap.registerPlugin(ScrollTrigger)
+
 
 export default function About() {
   const sectionRef = useRef(null)
@@ -79,7 +85,7 @@ export default function About() {
           {/* <h2 className="about-title font-syne text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold leading-tight mb-6 text-dark dark:text-white">
             Crafting digital experiences that make an <span className="text-blue border-b-4 border-blue/20">impact</span>
           </h2> */}
-          <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8 text-justify">
+          <p className={`text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8 text-justify ${roboto.className}`}>
             I am a Junior Full-Stack Developer with a strong passion for building modern, responsive, and user-friendly web applications. My journey started with curiosity about how websites work, which led me to learn HTML and CSS, and gradually move into JavaScript, React, and Next.js. I am now expanding my skills toward full-stack development.
           </p>
           {/* <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">I enjoy creating clean UI designs and solving real-world problems through code. I am especially interested in frontend development, where I can combine logic and creativity to build smooth and interactive user experiences.</p> */}
