@@ -132,11 +132,11 @@ export default function Hero() {
             <div className="absolute inset-0 bg-blue/30 dark:bg-blue/20 rounded-[40px] blur-[80px] animate-pulse" />
             
             {/* Image Container - Now Rectangular */}
-            <div className="relative mx-auto w-[250px]  md:w-full h-[250px] md:h-full bg-[#111827]  rounded-full  border-4  overflow-hidden shadow-2xl">
+            <div className="relative mx-auto w-[300px]  md:w-full h-[300px] md:h-full bg-[#111827]  rounded-full  border-4  overflow-hidden shadow-2xl">
               <img 
                 src="/profile1.png" 
                 alt="SOBUJ MADBOR" 
-                className="w-[250px] md:w-full h-[250px] md:h-full object-cover object-top scale-105 hover:scale-110 transition-transform duration-700"
+                className="w-[300px] md:w-full h-[300px] md:h-full object-cover object-top scale-105 hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t  to-transparent" />
             </div>
