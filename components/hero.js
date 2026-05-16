@@ -132,13 +132,13 @@ export default function Hero() {
             <div className="absolute inset-0 bg-blue/30 dark:bg-blue/20 rounded-[40px] blur-[80px] animate-pulse" />
             
             {/* Image Container - Now Rectangular */}
-            <div className="relative  md:w-full md:h-full bg-[#111827] rounded-full border-4 border-white/10 dark:border-white/5 overflow-hidden shadow-2xl">
+            <div className="relative  md:w-full md:h-full bg-[#111827]  rounded-full  border-4  overflow-hidden shadow-2xl">
               <img 
-                src="/profile.png" 
+                src="/profile1.png" 
                 alt="SOBUJ MADBOR" 
                 className="w-full h-full object-cover object-top scale-105 hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t  to-transparent" />
             </div>
 
             {/* Floating Tech Badges - Smaller and Equidistant */}
@@ -229,7 +229,7 @@ export default function Hero() {
             <FaGitAlt size={18} />
             Git
           </div>
-
+  
         </div>
 
       </Marquee>
