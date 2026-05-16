@@ -5,10 +5,16 @@ import { ThemeProvider } from "next-themes"
 import LenisProvider from "@/components/lenis-provider"
 import {   Inter,Smooch_Sans} from "next/font/google";
 
+
 export const metadata = {
   title: "Sobuj Madbor | Web Developer",
   description: "I build modern, responsive websites & web applications.",
+  icons: {
+    icon: "/sobuj2.png",
+  },
+
 }
+
 
 
 const inter = Inter({
