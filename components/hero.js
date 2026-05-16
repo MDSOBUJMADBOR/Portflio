@@ -132,7 +132,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-blue/30 dark:bg-blue/20 rounded-[40px] blur-[80px] animate-pulse" />
             
             {/* Image Container - Now Rectangular */}
-            <div className="relative  md:w-full md:h-full bg-[#111827] rounded-[40px] border-4 border-white/10 dark:border-white/5 overflow-hidden shadow-2xl">
+            <div className="relative  md:w-full md:h-full bg-[#111827] rounded-full border-4 border-white/10 dark:border-white/5 overflow-hidden shadow-2xl">
               <img 
                 src="/profile.png" 
                 alt="SOBUJ MADBOR" 
