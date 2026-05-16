@@ -130,28 +130,13 @@ export default function Footer() {
 
 
 
-
-
-{/* <form onSubmit={handleSubmit}>
-
-
-          <input
-            type="email"
-            required
-            placeholder="Your email"
-            className="w-full bg-white/5 border border-white/30 rounded-xl p-4 text-sm text-gray-300 focus:border-blue outline-none  "
-          />
-
-          <button type="submit" className="px-10 py-4 bg-blue hover:bg-blue-dark text-white rounded-xl font-bold text-sm cursor-pointer">
-            Subscribe
-          </button>
-</form> */}
-<form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit} className="space-y-4">
       <input
         type="email"
         name="email"
         value={formData.email}
-        onChange={handleChange}
+        // onChange={handleChange}
+         onChange={(e) => setEmail(e.target.value)}
         required
         placeholder="Your email"
         className="w-full bg-white/5 border border-white/30 rounded-xl p-4 text-sm text-gray-300 focus:border-blue outline-none"
@@ -192,119 +177,6 @@ export default function Footer() {
 }
 
 
-
-
-
-
-
-
-// "use client"
-
-// import { ArrowUp } from "lucide-react"
-// import { useState } from "react"
-
-// export default function Footer() {
-//   const [email, setEmail] = useState("")
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault()
-
-//     if (!email) return
-
-//     // encode করা (important)
-//     const subject = encodeURIComponent("Newsletter Subscribe")
-//     const body = encodeURIComponent(`Email: ${email}`)
-
-//     // mailto open
-//     window.location.href = `mailto:sobujmadbor660@gmail.com?subject=${subject}&body=${body}`
-
-//     // reset
-//     setEmail("")
-//   }
-
-//   return (
-//     <footer className="bg-[#030712] text-white pt-20 pb-10 border-t border-white/5 text-center md:text-left">
-      
-//       <div className="px-[5%] grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-
-//         {/* Brand */}
-//         <div className="space-y-6">
-//           <h2 className="text-xl font-bold">Sobuj Madbor</h2>
-//           <p className="text-gray-400 text-sm">
-//             I build modern, responsive and user-friendly websites.
-//           </p>
-//         </div>
-
-//         {/* Quick Links */}
-//         <div>
-//           <h4 className="font-bold mb-4">Quick Links</h4>
-//           <ul className="space-y-2 text-gray-400 text-sm">
-//             {["Home", "About", "Skills", "Projects", "Contact"].map((link) => (
-//               <li key={link}>
-//                 <a href={`#${link.toLowerCase()}`} className="hover:text-blue">
-//                   {link}
-//                 </a>
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-
-//         {/* Services */}
-//         <div>
-//           <h4 className="font-bold mb-4">Services</h4>
-//           <ul className="space-y-2 text-gray-400 text-sm">
-//             {["Web Dev", "UI/UX", "SEO"].map((item) => (
-//               <li key={item}>
-//                 <span className="hover:text-blue cursor-pointer">{item}</span>
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-
-//         {/* Newsletter */}
-//         <div>
-//           <h4 className="font-bold mb-4">Newsletter</h4>
-
-//           <form onSubmit={handleSubmit} className="space-y-4">
-//             <input
-//               type="email"
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//               placeholder="Your email"
-//               required
-//               className="w-full bg-white/5 border border-white/30 rounded-xl p-3 text-sm text-gray-300 outline-none focus:border-blue"
-//             />
-
-//             <button
-//               type="submit"
-//               className="w-full py-3 bg-blue hover:bg-blue-dark rounded-xl text-sm font-semibold"
-//             >
-//               Subscribe
-//             </button>
-//           </form>
-
-//           <p className="text-xs text-gray-500 mt-3">
-            
-//           </p>
-//         </div>
-//       </div>
-
-//       {/* Bottom */}
-//       <div className="px-[5%] pt-6 border-t border-white/5 flex justify-between items-center">
-//         <p className="text-gray-500 text-sm">
-//           © 2026 Sobuj Madbor
-//         </p>
-
-//         <button
-//           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-//           className="p-2 bg-white/5 rounded-lg hover:bg-blue"
-//         >
-//           <ArrowUp size={16} />
-//         </button>
-//       </div>
-//     </footer>
-//   )
-// }
 
 
 
