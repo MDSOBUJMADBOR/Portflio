@@ -22,28 +22,40 @@ const Facebook = (props) => (
 )
 
 export default function Footer() {
-  const [formData, setFormData] = useState({
-    email: "",
-  })
+const [email,setEmail] = useState("")
+const handleSubmit = (e) => {
+  e.preventDefault()
+  if(!email) return
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      email: e.target.value,
-    })
-  }
+  const subject = encodeURIComponent("Newsletter Subscribe")
+  const body = encodeURIComponent(`Email: ${email}`)
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+ window.location.href = `mailto:sobujmadbor660@gmail.com?subject=${subject}&body=${body}`
 
-    // email client open 
-    window.location.href = `mailto:sobujmadbor660@gmail.com?subject=Subscribe&body=Email: ${formData.email}`
+ setEmail("")
+}
 
-    // reset
-    setFormData({
-      email: "",
-    })
-  }
+
+  // const [email, setEmail] = useState("")
+
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     email: e.target.value,
+  //   })
+  // }
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+
+  //   // email client open 
+  //   window.location.href = `mailto:sobujmadbor660@gmail.com?subject=Subscribe&body=Email: ${formData.email}`
+
+  //   // reset
+  //   setFormData({
+  //     email: "",
+  //   })
+  // }
 
 
 
@@ -134,7 +146,7 @@ export default function Footer() {
       <input
         type="email"
         name="email"
-        value={formData.email}
+        value={email}
         // onChange={handleChange}
          onChange={(e) => setEmail(e.target.value)}
         required
@@ -153,16 +165,13 @@ export default function Footer() {
 
 
 
-
-
-
         </div>
       </div>
 
       {/* Bottom */}
       <div className="px-[5%] pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-gray-500 text-sm">
-          © 2026 Sobuj Madbor. All rights reserved.
+          © 2026 Sobuj Madbor. All rights reserved. 
         </p>
 
         <button
