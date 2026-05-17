@@ -139,7 +139,7 @@ export default function Hero() {
                 className="w-[300px] md:w-full h-[300px] md:h-full object-cover object-top scale-105 hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t  to-transparent" />
-            </div>
+            </div> 
 
             {/* Floating Tech Badges - Smaller and Equidistant */}
             {techBadges.map((badge, idx) => {
