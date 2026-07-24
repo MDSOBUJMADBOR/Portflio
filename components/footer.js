@@ -21,90 +21,63 @@ const Facebook = (props) => (
   </svg>
 )
 
+const socialLinks = [
+  { icon: Github, href: "https://github.com/MDSOBUJMADBOR", label: "GitHub", hoverBg: "hover:bg-[#6e40c9]", hoverShadow: "hover:shadow-[0_0_20px_rgba(110,64,201,0.4)]" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/md-sobuj-madbor", label: "LinkedIn", hoverBg: "hover:bg-[#0A66C2]", hoverShadow: "hover:shadow-[0_0_20px_rgba(10,102,194,0.4)]" },
+  { icon: Facebook, href: "https://www.facebook.com/share/1PDgKKfk12/", label: "Facebook", hoverBg: "hover:bg-[#1877F2]", hoverShadow: "hover:shadow-[0_0_20px_rgba(24,119,242,0.4)]" },
+]
+
 export default function Footer() {
-const [email,setEmail] = useState("")
-const handleSubmit = (e) => {
-  e.preventDefault()
-  if(!email) return
+  const [email, setEmail] = useState("")
+  const [newsletterSubscribed, setNewsletterSubscribed] = useState(false)
 
-  const subject = encodeURIComponent("Newsletter Subscribe")
-  const body = encodeURIComponent(`Email: ${email}`)
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (!email) return
 
- window.location.href = `mailto:sobujmadbor660@gmail.com?subject=${subject}&body=${body}`
+    const subject = encodeURIComponent("Newsletter Subscribe")
+    const body = encodeURIComponent(`Email: ${email}`)
 
- setEmail("")
-}
+    window.location.href = `mailto:sobujmadbor660@gmail.com?subject=${subject}&body=${body}`
 
-
-  // const [email, setEmail] = useState("")
-
-  // const handleChange = (e) => {
-  //   setFormData({
-  //     ...formData,
-  //     email: e.target.value,
-  //   })
-  // }
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-
-  //   // email client open 
-  //   window.location.href = `mailto:sobujmadbor660@gmail.com?subject=Subscribe&body=Email: ${formData.email}`
-
-  //   // reset
-  //   setFormData({
-  //     email: "",
-  //   })
-  // }
-
-
-
+    setNewsletterSubscribed(true)
+    setEmail("")
+  }
 
   return (
-    <footer className="bg-[#030712] text-white pt-20 pb-10 border-t border-white/5  text-center md:text-left">
+    <footer className="bg-[#030712] text-white pt-20 pb-10 border-t border-white/5 text-center md:text-left">
       <div className="px-[5%] grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
 
         {/* Brand */}
         <div className="space-y-8">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 justify-center md:justify-start">
             <div className="w-12 h-12 rounded-full bg-blue flex items-center justify-center font-syne font-extrabold text-lg text-white shadow-lg shadow-blue/20">
               SM
             </div>
             <span className="font-syne font-bold text-xl">Sobuj Madbor</span>
           </div>
 
-          <p className="text-gray-400 text-sm leading-relaxed max-w-[280px]">
+          <p className="text-gray-400 text-sm leading-relaxed max-w-[280px] mx-auto md:mx-0">
             I build modern, responsive and user-friendly websites and web applications.
           </p>
 
           {/* SOCIAL LINKS */}
-          <div className="flex gap-4">
-            <a
-              href="https://github.com/MDSOBUJMADBOR"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue transition-all"
-            >
-              <Github size={18} />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/md-sobuj-madbor"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue transition-all"
-            >
-              <Linkedin size={18} />
-            </a>
-
-            <a
-              href="https://www.facebook.com/share/1PDgKKfk12/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue transition-all"
-            >
-              <Facebook size={18} />
-            </a>
+          <div className="flex gap-4 justify-center md:justify-start">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group relative w-11 h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-transparent ${link.hoverBg} ${link.hoverShadow} transition-all duration-300 hover:scale-110 active:scale-95`}
+              >
+                <link.icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                {/* Tooltip */}
+                <span className="absolute -top-9 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-gray-900 dark:bg-white/10 backdrop-blur-md text-white text-[10px] font-bold rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap">
+                  {link.label}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
 
@@ -112,9 +85,9 @@ const handleSubmit = (e) => {
         <div>
           <h4 className="font-bold text-lg mb-8">Quick Links</h4>
           <ul className="space-y-4 text-sm text-gray-400">
-            {["Home", "About", "Skills","Projects", "Contact"].map((link) => (
+            {["Home", "About", "Skills", "Projects", "Contact"].map((link) => (
               <li key={link}>
-                <a href={`#${link.toLowerCase()}`} className="hover:text-blue">
+                <a href={`#${link.toLowerCase()}`} className="hover:text-blue transition-colors">
                   {link}
                 </a>
               </li>
@@ -128,7 +101,7 @@ const handleSubmit = (e) => {
           <ul className="space-y-4 text-sm text-gray-400">
             {["Web Development", "Web Design", "Responsive Design", "UI/UX Design", "SEO"].map((service) => (
               <li key={service}>
-                <a href="#" className="hover:text-blue">
+                <a href="#" className="hover:text-blue transition-colors">
                   {service}
                 </a>
               </li>
@@ -140,43 +113,47 @@ const handleSubmit = (e) => {
         <div className="space-y-6">
           <h4 className="font-bold text-lg mb-8">Newsletter</h4>
 
+          {!newsletterSubscribed ? (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                placeholder="Your email"
+                className="w-full bg-white/5 border border-white/30 rounded-xl p-4 text-sm text-gray-300 focus:border-blue outline-none transition-colors placeholder-gray-500"
+              />
 
-
-<form onSubmit={handleSubmit} className="space-y-4">
-      <input
-        type="email"
-        name="email"
-        value={email}
-        // onChange={handleChange}
-         onChange={(e) => setEmail(e.target.value)}
-        required
-        placeholder="Your email"
-        className="w-full bg-white/5 border border-white/30 rounded-xl p-4 text-sm text-gray-300 focus:border-blue outline-none"
-      />
-
-      <button
-        type="submit"
-        className="px-10 py-4 bg-blue hover:bg-blue-dark text-white rounded-xl font-bold text-sm cursor-pointer"
-      >
-        Subscribe
-      </button>
-    </form>
-
-
-
-
+              <button
+                type="submit"
+                className="w-full sm:w-auto px-10 py-4 bg-blue hover:bg-blue-dark text-white rounded-xl font-bold text-sm cursor-pointer transition-all active:scale-95"
+              >
+                Subscribe
+              </button>
+            </form>
+          ) : (
+            <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-6 text-center">
+              <span className="text-2xl block mb-2">🎉</span>
+              <h4 className="text-sm font-bold text-emerald-400">Successfully Subscribed!</h4>
+              <p className="text-xs text-gray-400 mt-1 leading-relaxed">
+                Thank you for subscribing. We will send updates straight to your inbox.
+              </p>
+            </div>
+          )}
         </div>
+
       </div>
 
       {/* Bottom */}
       <div className="px-[5%] pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-gray-500 text-sm">
-          © 2026 Sobuj Madbor. All rights reserved. 
+          © 2026 Sobuj Madbor. All rights reserved.
         </p>
 
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-blue hover:text-white"
+          className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-blue hover:text-white transition-colors"
         >
           <ArrowUp size={18} />
         </button>
@@ -184,8 +161,3 @@ const handleSubmit = (e) => {
     </footer>
   )
 }
-
-
-
-
-

@@ -20,23 +20,21 @@ const Linkedin = (props) => (
 
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/MDSOBUJMADBOR", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/md-sobuj-madbor", label: "LinkedIn" },
-  { icon: Facebook, href: "https://www.facebook.com/share/1PDgKKfk12/", label: "Facebook" },
-  
-  
+  { icon: Github, href: "https://github.com/MDSOBUJMADBOR", label: "GitHub", hoverBg: "hover:bg-[#6e40c9]", hoverShadow: "hover:shadow-[0_0_20px_rgba(110,64,201,0.4)]" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/md-sobuj-madbor", label: "LinkedIn", hoverBg: "hover:bg-[#0A66C2]", hoverShadow: "hover:shadow-[0_0_20px_rgba(10,102,194,0.4)]" },
+  { icon: Facebook, href: "https://www.facebook.com/share/1PDgKKfk12/", label: "Facebook", hoverBg: "hover:bg-[#1877F2]", hoverShadow: "hover:shadow-[0_0_20px_rgba(24,119,242,0.4)]" },
 ]
 
 const techBadges = [
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", label: "HTML5" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", label: "TypeScript" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", label: "React" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", label: "JS" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", label: "CSS3" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", label: "Node.js" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", label: "Next.js" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", label: "MongoDB" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", label: "Tailwind.css" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expressjs/expressjs-original.svg", label: "Express.js" },
 ]
-  const smooch = Smooch_Sans({
+const smooch = Smooch_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -70,52 +68,73 @@ export default function Hero() {
               </span>
               Web Developer
             </div>
-            <h1 className="font-syne text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-[1.05] mb-4 text-dark dark:text-white">
-              Hi , I'm <span className="text-blue italic text-shadow-lg">SOBUJ MADBOR</span>
+            <h1 className="font-syne text-[clamp(2.5rem,6vw,4.5rem)] font-semibold leading-[1.05] mb-4 text-dark dark:text-white">
+              {/* Hi , I'm <span className="text-blue italic text-shadow-lg">SOBUJ MADBOR</span> */}
+              <span>MERN Stack</span><br></br>
+              <span className="bg-gradient-to-r from-blue to-cyan-400 bg-clip-text text-transparent">Developer</span>
+
             </h1>
-   
-<a href="https://git.io/typing-svg">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=28&pause=1000&color=0000FF&center=false&vCenter=false&width=600&lines=MERN+Stack+Developer;Problem+Solver;Advanced+React+%26+Node.js"
-    alt="Typing SVG"
-  />
-</a>
+
+            <a href="https://git.io/typing-svg">
+              <img
+                src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=28&pause=1000&color=0000FF&center=false&vCenter=false&width=600&lines=MERN+Stack+Developer;Problem+Solver;Advanced+React+%26+Node.js"
+                alt="Typing SVG"
+                className="max-w-full h-auto"
+              />
+            </a>
 
 
 
           </div>
 
- <p className={`text-gray-500 dark:text-gray-400 text-lg leading-relaxed max-w-lg text-[24px] ${smooch.className}`}>
+          <p className={`text-gray-500 dark:text-gray-400 text-lg leading-relaxed max-w-lg text-[24px] ${smooch.className}`}>
             I build modern, fast, and responsive web applications using React and Next.js. I focus on clean UI design, smooth user experience, and performance optimization.
 
           </p>
 
-          <div className="flex flex-wrap gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
             <a
               href="#contact"
-              className="group flex items-center gap-3 px-8 py-4 bg-blue hover:bg-blue-dark text-white rounded-2xl font-bold transition-all hover:shadow-2xl hover:shadow-blue/40"
+              className="group flex items-center justify-center gap-3 px-8 py-4 bg-blue hover:bg-blue-dark text-white rounded-2xl font-bold transition-all hover:shadow-2xl hover:shadow-blue/40 w-full sm:w-auto"
             >
               Hire Me <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#projects"
-              className="flex items-center gap-3 px-8 py-4 border-2 border-gray-200 dark:border-white/10 hover:border-blue dark:hover:border-blue hover:text-blue text-dark dark:text-white rounded-2xl font-bold transition-all"
+              className="flex items-center justify-center gap-3 px-8 py-4 border-2 border-gray-200 dark:border-white/10 hover:border-blue dark:hover:border-blue hover:text-blue text-dark dark:text-white rounded-2xl font-bold transition-all w-full sm:w-auto"
             >
-              View My Work <MousePointer2 size={20} />
+              View My Project <MousePointer2 size={20} />
             </a>
           </div>
 
-          <div className="flex items-center gap-6 pt-6">
-            <div className="flex gap-3">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-6">
+            <div className="flex gap-4">
               {socialLinks.map((link) => (
-                <a target="_blank"
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={link.label}
                   href={link.href}
-                  className="w-11 h-11 rounded-full bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-blue hover:text-white hover:border-blue transition-all"
+                  className={`group relative w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-white hover:border-transparent ${link.hoverBg} ${link.hoverShadow} transition-all duration-300 hover:scale-110 active:scale-95`}
                 >
-                  <link.icon size={20} />
+                  <link.icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                  {/* Tooltip */}
+                  <span className="absolute -top-9 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-gray-900 dark:bg-white/10 backdrop-blur-md text-white text-[10px] font-bold rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap">
+                    {link.label}
+                  </span>
                 </a>
               ))}
+            </div>
+            {/* Divider + Status */}
+            <div className="flex items-center gap-3">
+              <div className="w-px h-8 bg-gray-300 dark:bg-white/10" />
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                </span>
+                <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">Available for hire</span>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -130,42 +149,41 @@ export default function Hero() {
           <div className="relative max-w-[340px] sm:w-[400px] aspect-[4/5]">
             {/* Background Glow */}
             <div className="absolute inset-0 bg-blue/30 dark:bg-blue/20 rounded-[40px] blur-[80px] animate-pulse" />
-            
+
             {/* Image Container - Now Rectangular */}
             <div className="relative mx-auto w-[300px]  md:w-full h-[300px] md:h-full bg-[#111827]  rounded-full  border-4  overflow-hidden shadow-2xl">
-              <img 
-                src="/profile1.png" 
-                alt="SOBUJ MADBOR" 
+              <img
+                src="/profile1.png"
+                alt="SOBUJ MADBOR"
                 className="w-[300px] md:w-full h-[300px] md:h-full object-cover object-top scale-105 hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t  to-transparent" />
-            </div> 
+            </div>
 
             {/* Floating Tech Badges - Smaller and Equidistant */}
             {techBadges.map((badge, idx) => {
-              // Recalculated positions for better balance around the rectangle
               const positions = [
-                "top-[-30px] left-[-30px] hidden md:block",    // HTML5
-                "top-[-30px] right-[-30px] hidden md:block",   // React
-                "bottom-[-30px] left-[-30px] hidden md:block",  // JS
-                "bottom-[-30px] right-[-30px] hidden md:block", // CSS3
-                "top-1/2 left-[-70px] -translate-y-1/2 hidden md:block", // Next.js
-                "top-1/2 right-[-70px] -translate-y-1/2 hidden md:block", // MongoDB
-                "bottom-[-60px] left-1/2 -translate-x-1/2 hidden md:block", // Tailwind
+                "top-[-20px] left-[-20px] hidden xl:block",    // TypeScript
+                "top-[-20px] right-[-20px] hidden xl:block",   // React
+                "bottom-[-20px] left-[-20px] hidden xl:block",  // JS
+                "bottom-[-20px] right-[-20px] hidden xl:block", // Node.js
+                "top-1/2 left-[-50px] -translate-y-1/2 hidden xl:block", // Next.js
+                "top-1/2 right-[-50px] -translate-y-1/2 hidden xl:block", // MongoDB
+                "bottom-[-50px] left-1/2 -translate-x-1/2 hidden xl:block", // Express.js
               ];
-              
+
               return (
                 <motion.div
                   key={badge.label}
-                  animate={{ 
+                  animate={{
                     y: [0, -10, 0],
                     rotate: [0, 5, 0, -5, 0]
                   }}
-                  transition={{ 
-                    duration: 5, 
-                    repeat: Infinity, 
-                    delay: idx * 0.6, 
-                    ease: "easeInOut" 
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    delay: idx * 0.6,
+                    ease: "easeInOut"
                   }}
                   className={cn(
                     "absolute bg-white/95 dark:bg-dark-2/95 backdrop-blur-lg p-2 rounded-2xl shadow-xl border border-white/20 flex flex-col items-center gap-1 z-30 min-w-[60px]",
@@ -183,57 +201,57 @@ export default function Hero() {
 
 
 
-<div className="mt-8 md:hidden">
-      <Marquee speed={60} pauseOnHover={true} gradient={false}>
-        
-        <div className="flex gap-4 items-center">
+            <div className="mt-8 xl:hidden">
+              <Marquee speed={60} pauseOnHover={true} gradient={false}>
 
-          {/* React */}
-          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-blue-500/10 text-blue-500 border border-blue-500/20 font-semibold hover:bg-blue-500 hover:text-white transition-all">
-            <FaReact size={20} />
-            React
-          </div>
+                <div className="flex gap-4 items-center">
 
-          {/* Next.js */}
-          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-black/10 text-black dark:text-white border border-black/20 font-semibold hover:bg-black hover:text-white transition-all">
-            <SiNextdotjs size={18} />
-            Next.js
-          </div>
+                  {/* React */}
+                  <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-blue-500/10 text-blue-500 border border-blue-500/20 font-semibold hover:bg-blue-500 hover:text-white transition-all">
+                    <FaReact size={20} />
+                    React
+                  </div>
 
-          {/* Node.js */}
-          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-green-500/10 text-green-600 border border-green-500/20 font-semibold hover:bg-green-500 hover:text-white transition-all">
-            <FaNodeJs size={20} />
-            Node.js
-          </div>
+                  {/* Next.js */}
+                  <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-black/10 text-black dark:text-white border border-black/20 font-semibold hover:bg-black hover:text-white transition-all">
+                    <SiNextdotjs size={18} />
+                    Next.js
+                  </div>
 
-          {/* MongoDB */}
-          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 font-semibold hover:bg-emerald-500 hover:text-white transition-all">
-            <SiMongodb size={18} />
-            MongoDB
-          </div>
+                  {/* Node.js */}
+                  <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-green-500/10 text-green-600 border border-green-500/20 font-semibold hover:bg-green-500 hover:text-white transition-all">
+                    <FaNodeJs size={20} />
+                    Node.js
+                  </div>
 
-          {/* Tailwind */}
-          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-cyan-500/10 text-cyan-600 border border-cyan-500/20 font-semibold hover:bg-cyan-500 hover:text-white transition-all">
-            <SiTailwindcss size={18} />
-            Tailwind
-          </div>
+                  {/* MongoDB */}
+                  <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 font-semibold hover:bg-emerald-500 hover:text-white transition-all">
+                    <SiMongodb size={18} />
+                    MongoDB
+                  </div>
 
-          {/* JavaScript */}
-          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-yellow-500/10 text-yellow-600 border border-yellow-500/20 font-semibold hover:bg-yellow-500 hover:text-black transition-all">
-            <FaJs size={18} />
-            JavaScript
-          </div>
+                  {/* Tailwind */}
+                  <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-cyan-500/10 text-cyan-600 border border-cyan-500/20 font-semibold hover:bg-cyan-500 hover:text-white transition-all">
+                    <SiTailwindcss size={18} />
+                    Tailwind
+                  </div>
 
-          {/* Git */}
-          <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-orange-500/10 text-orange-600 border border-orange-500/20 font-semibold hover:bg-orange-500 hover:text-white transition-all">
-            <FaGitAlt size={18} />
-            Git
-          </div>
-  
-        </div>
+                  {/* JavaScript */}
+                  <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-yellow-500/10 text-yellow-600 border border-yellow-500/20 font-semibold hover:bg-yellow-500 hover:text-black transition-all">
+                    <FaJs size={18} />
+                    JavaScript
+                  </div>
 
-      </Marquee>
-    </div>
+                  {/* Git */}
+                  <div className="flex items-center gap-2 px-6 py-2 mx-2 rounded-full bg-orange-500/10 text-orange-600 border border-orange-500/20 font-semibold hover:bg-orange-500 hover:text-white transition-all">
+                    <FaGitAlt size={18} />
+                    Git
+                  </div>
+
+                </div>
+
+              </Marquee>
+            </div>
 
 
           </div>

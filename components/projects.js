@@ -1,59 +1,34 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Folder, ExternalLink } from "lucide-react"
-import { FaGithub } from "react-icons/fa"
-
-const projects = [
-  {
-    title: "Portfolio Website",
-    desc: "A personal portfolio website to showcase projects and skills.",
-    tags: ["Tailwind CSS", "JavaScript", "React", "Next.js"],
-    image: "/portflio.png",
-    liveUrl: "https://sobuj-madbor-portflio.vercel.app",
-    githubUrl: "https://github.com/MDSOBUJMADBOR/Portflio",
-  },
-  {
-    title: "Pixgen",
-    desc: "A full-stack e-commerce website built with the MERN stack.",
-    tags: ["Tailwind CSS","React", "Next.js", "MongoDB"],
-    image: "/exjen.png",
-    liveUrl: "https://pixgen-next-js.vercel.app",
-    githubUrl: "https://github.com/MDSOBUJMADBOR/Pixgen-next.js",
-  },
-  {
-    title: "Tile Gallery",
-    desc: "A task management application to organize tasks and boost productivity.",
-    tags: ["Tailwind CSS", "React", "Node.js", "MongoDB","Next.js"],
-    image: "/gallery.png",
-    liveUrl: "https://tiles-gallery-next.vercel.app",
-    githubUrl: "https://github.com/MDSOBUJMADBOR/Tiles-gallery-next",
-  },
-]
+import Link from "next/link"
+import { projectsData } from "@/lib/data"
+import { ArrowRight } from "lucide-react"
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 px-[5%] bg-gray-50 dark:bg-[#030712]"
+      className="py-24 px-[5%] bg-[#0B0E17] text-white"
     >
       {/* Header */}
-      <div className="flex justify-between items-center mb-10">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-blue/10 dark:bg-blue/20 flex items-center justify-center text-blue">
-            <Folder size={20} />
-          </div>
-          <h2 className="font-syne text-2xl font-bold text-dark dark:text-white">
-            Projects
-          </h2>
+      <div className="flex flex-col items-center text-center mb-16 max-w-2xl mx-auto">
+        <div className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-[3px] text-gray-400 mb-6">
+          My Work
         </div>
+        <h2 className="font-syne text-4xl md:text-5xl font-extrabold mb-6">
+          Featured <span className="text-blue-500">Projects</span>
+        </h2>
+        <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+          Here are some of my selected projects. Each project was a unique challenge that helped me grow as a developer.
+        </p>
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, idx) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {projectsData.map((project, idx) => (
           <motion.div
-            key={project.title}
+            key={project.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -63,65 +38,47 @@ export default function Projects() {
               stiffness: 200,
               damping: 18,
             }}
-            className="group bg-white dark:bg-[#111827] rounded-2xl p-4 border border-gray-200 dark:border-white/5 shadow-sm hover:shadow-xl transition-all duration-700 ease-in-out hover:scale-[1.08]"
+            className="flex flex-col bg-[#121626] rounded-2xl p-5 border border-white/5 shadow-xl hover:shadow-blue-500/10 transition-all duration-300 group"
           >
             {/* Image */}
-            <div className="aspect-[16/9] bg-gray-100 dark:bg-gray-800 rounded-xl mb-4 overflow-hidden relative">
+            <div className="aspect-[4/3] bg-[#1a1e36] rounded-xl mb-6 overflow-hidden relative">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-blue/10 to-transparent" />
             </div>
 
             {/* Title */}
-            <h3 className="font-syne text-lg font-bold mb-2 text-dark dark:text-white">
+            <h3 className="font-syne text-2xl font-bold mb-3 text-white">
               {project.title}
             </h3>
 
             {/* Description */}
-            <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed mb-4">
-              {project.desc}
+            <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+              {project.desc.substring(0, 100)}...
             </p>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-1.5 mb-5">
+            <div className="flex flex-wrap gap-2 mb-6">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 py-1 bg-gray-100 dark:bg-[#1F2937] text-blue font-bold text-[9px] rounded-md uppercase"
+                  className="px-3 py-1.5 bg-white/5 border border-white/10 text-gray-300 font-medium text-[10px] rounded-md"
                 >
                   {tag}
                 </span>
               ))}
             </div>
 
-            {/* Links */}
-            <div className="flex justify-around items-center pt-3 border-t border-gray-100 dark:border-white/5">
-              
-              {/* Live Link */}
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-blue text-[11px] font-semibold transition-colors"
-              >
-                Live <ExternalLink size={12} />
-              </a>
-
-              <span className="text-gray-300 dark:text-gray-700">|</span>
-
-              {/* GitHub Link */}
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-blue text-[11px] font-semibold transition-colors"
-              >
-                GitHub <FaGithub size={14} />
-              </a>
-            </div>
+            {/* Link Button */}
+            <Link
+              href={`/projects/${project.id}`}
+              className="w-full py-3.5 rounded-xl border border-blue-500/30 hover:border-blue-500 hover:bg-blue-500/10 text-blue-400 font-semibold text-sm transition-all flex items-center justify-center gap-2 group/btn"
+            >
+              View Details 
+              <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+            </Link>
           </motion.div>
         ))}
       </div>

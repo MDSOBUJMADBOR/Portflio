@@ -45,6 +45,7 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 }
 
@@ -59,4 +60,3 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-blue to-accent;
   }
 }
-

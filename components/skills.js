@@ -3,10 +3,12 @@
 import { motion } from "framer-motion"
 
 const progressSkills = [
-  { name: "HTML & CSS", pct: 95 },
-  { name: "JavaScript", pct: 90 },
+
+
   { name: "React", pct: 88 },
-  { name: "Next.js", pct: 80},
+  { name: "Next.js", pct: 80 },
+  { name: "JavaScript", pct: 90 },
+  { name: "TypeScript", pct: 65 },
   { name: "Node.js", pct: 85 },
   { name: "Express.js", pct: 81 },
   { name: "Mongodb", pct: 78 },
@@ -100,135 +102,101 @@ export default function Skills() {
 
 
 
-        {/* Education Area */}
-        {/* <div>
+
+
+        <div>
           <div className="text-blue font-bold text-xs uppercase tracking-[3px] mb-4">Academic</div>
           <h2 className="font-syne text-3xl md:text-4xl font-extrabold mb-4">Education</h2>
-          <p className="text-gray-500 dark:text-gray-400 mb-10">My educational journey and accomplishments.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-10">
+            My educational journey and accomplishments.
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="p-8 rounded-3xl bg-gray-50 dark:bg-dark-3 border border-gray-100 dark:border-white/5 relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-24 h-24 bg-blue/10 rounded-bl-full blur-2xl" />
-            
-            <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-6">
-              <div>
-                <div className="text-blue font-bold text-xs mb-1">2019 – 2023</div>
-                <h3 className="font-syne text-xl font-bold mb-1 text-dark dark:text-white">B.Sc. in Computer Science</h3>
-                <div className="text-gray-500 dark:text-gray-400 text-sm">Daffodil International University</div>
+          <div className="space-y-6">
+
+            {/* BA */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="p-5 sm:p-8 rounded-3xl bg-gray-50 dark:bg-dark-3 border border-gray-100 dark:border-white/5 relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue/10 rounded-bl-full blur-2xl" />
+
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <div className="text-blue font-bold text-xs mb-1">2024 – Present</div>
+                  <h3 className="font-syne text-xl font-bold text-dark dark:text-white">
+                    BA in Political Science
+                  </h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">
+                    Madaripur Govt. College
+                  </p>
+                </div>
+
+                <div className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900/20 rounded-xl border border-yellow-200 dark:border-yellow-800 text-xs font-semibold text-yellow-700 dark:text-yellow-400">
+                  Running
+                </div>
               </div>
-              <div className="px-4 py-2 bg-blue/10 rounded-xl border border-blue/20 text-center shrink-0">
-                <div className="text-[10px] font-bold text-gray-500 uppercase tracking-tighter">CGPA</div>
-                <div className="text-blue font-extrabold text-lg leading-none mt-1">3.45 <span className="text-[10px] text-gray-500">/ 4.00</span></div>
+            </motion.div>
+
+            {/* HSC */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="p-5 sm:p-8 rounded-3xl bg-gray-50 dark:bg-dark-3 border border-gray-100 dark:border-white/5 relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue/10 rounded-bl-full blur-2xl" />
+
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <div className="text-blue font-bold text-xs mb-1">2022 – 2024</div>
+                  <h3 className="font-syne text-xl font-bold text-dark dark:text-white">
+                    HSC – Humanities
+                  </h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">
+                    Madaripur Govt. College
+                  </p>
+                </div>
+
+                <div className="px-4 py-2 bg-blue/10 rounded-xl border border-blue/20 text-center">
+                  <div className="text-[10px] font-bold text-gray-500 uppercase">GPA</div>
+                  <div className="text-blue font-extrabold text-lg">4.17</div>
+                </div>
               </div>
-            </div>
+            </motion.div>
 
-            <ul className="space-y-3">
-              {["Data Structures & Algorithms", "Web Development", "Database Management", "Software Engineering"].map((sub) => (
-                <li key={sub} className="flex items-center gap-3 text-gray-500 dark:text-gray-400 text-sm">
-                  <span className="text-blue font-bold">✓</span> {sub}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div> */}
+            {/* SSC */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="p-5 sm:p-8 rounded-3xl bg-gray-50 dark:bg-dark-3 border border-gray-100 dark:border-white/5 relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue/10 rounded-bl-full blur-2xl" />
 
-<div>
-  <div className="text-blue font-bold text-xs uppercase tracking-[3px] mb-4">Academic</div>
-  <h2 className="font-syne text-3xl md:text-4xl font-extrabold mb-4">Education</h2>
-  <p className="text-gray-500 dark:text-gray-400 mb-10">
-    My educational journey and accomplishments.
-  </p>
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <div className="text-blue font-bold text-xs mb-1">2020 – 2022</div>
+                  <h3 className="font-syne text-xl font-bold text-dark dark:text-white">
+                    SSC – Humanities
+                  </h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">
+                    Mahmulpur Modern High School
+                  </p>
+                </div>
 
-  <div className="space-y-6">
+                <div className="px-4 py-2 bg-blue/10 rounded-xl border border-blue/20 text-center">
+                  <div className="text-[10px] font-bold text-gray-500 uppercase">GPA</div>
+                  <div className="text-blue font-extrabold text-lg">4.72</div>
+                </div>
+              </div>
+            </motion.div>
 
-    {/* BA */}
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      className="p-8 rounded-3xl bg-gray-50 dark:bg-dark-3 border border-gray-100 dark:border-white/5 relative overflow-hidden"
-    >
-      <div className="absolute top-0 right-0 w-24 h-24 bg-blue/10 rounded-bl-full blur-2xl" />
-
-      <div className="flex justify-between items-start mb-4">
-        <div>
-          <div className="text-blue font-bold text-xs mb-1">2024 – Present</div>
-          <h3 className="font-syne text-xl font-bold text-dark dark:text-white">
-            BA in Political Science
-          </h3>
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Madaripur Govt. College
-          </p>
+          </div>
         </div>
-
-        <div className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900/20 rounded-xl border border-yellow-200 dark:border-yellow-800 text-xs font-semibold text-yellow-700 dark:text-yellow-400">
-          Running
-        </div>
-      </div>
-    </motion.div>
-
-    {/* HSC */}
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.1 }}
-      className="p-8 rounded-3xl bg-gray-50 dark:bg-dark-3 border border-gray-100 dark:border-white/5 relative overflow-hidden"
-    >
-      <div className="absolute top-0 right-0 w-24 h-24 bg-blue/10 rounded-bl-full blur-2xl" />
-
-      <div className="flex justify-between items-start mb-4">
-        <div>
-          <div className="text-blue font-bold text-xs mb-1">2022 – 2024</div>
-          <h3 className="font-syne text-xl font-bold text-dark dark:text-white">
-            HSC – Humanities
-          </h3>
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Madaripur Govt. College
-          </p>
-        </div>
-
-        <div className="px-4 py-2 bg-blue/10 rounded-xl border border-blue/20 text-center">
-          <div className="text-[10px] font-bold text-gray-500 uppercase">GPA</div>
-          <div className="text-blue font-extrabold text-lg">4.17</div>
-        </div>
-      </div>
-    </motion.div>
-
-    {/* SSC */}
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.2 }}
-      className="p-8 rounded-3xl bg-gray-50 dark:bg-dark-3 border border-gray-100 dark:border-white/5 relative overflow-hidden"
-    >
-      <div className="absolute top-0 right-0 w-24 h-24 bg-blue/10 rounded-bl-full blur-2xl" />
-
-      <div className="flex justify-between items-start mb-4">
-        <div>
-          <div className="text-blue font-bold text-xs mb-1">2020 – 2022</div>
-          <h3 className="font-syne text-xl font-bold text-dark dark:text-white">
-            SSC – Humanities
-          </h3>
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Mahmulpur Modern High School
-          </p>
-        </div>
-
-        <div className="px-4 py-2 bg-blue/10 rounded-xl border border-blue/20 text-center">
-          <div className="text-[10px] font-bold text-gray-500 uppercase">GPA</div>
-          <div className="text-blue font-extrabold text-lg">4.72</div>
-        </div>
-      </div>
-    </motion.div>
-
-  </div>
-</div>
 
 
 

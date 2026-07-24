@@ -3,7 +3,7 @@
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import LenisProvider from "@/components/lenis-provider"
-import {   Inter,Smooch_Sans} from "next/font/google";
+import { Inter, Smooch_Sans } from "next/font/google";
 
 
 export const metadata = {
@@ -20,12 +20,12 @@ export const metadata = {
 const inter = Inter({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400","500","600","700"]
+  weight: ["400", "500", "600", "700"]
 })
 export const smooch = Smooch_Sans({
   variable: "--font-smooch",
   subsets: ["latin"],
-  weight: ["400","500","600","700"]
+  weight: ["400", "500", "600", "700"]
 });
 
 
@@ -36,16 +36,17 @@ export const smooch = Smooch_Sans({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning>
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
       <body className={`${inter.className}`}>
         <ThemeProvider
           attribute="class"
+          defaultTheme="dark"
           
           enableSystem={false}  // 🔥 avoid bug
         >
-          <LenisProvider>            
+          <LenisProvider>
             {children}
-          </LenisProvider>  
+          </LenisProvider>
         </ThemeProvider>
       </body>
     </html>
