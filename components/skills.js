@@ -134,7 +134,7 @@ export default function Skills() {
                 </div>
 
                 <div className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900/20 rounded-xl border border-yellow-200 dark:border-yellow-800 text-xs font-semibold text-yellow-700 dark:text-yellow-400">
-                  Running
+                  Honours running
                 </div>
               </div>
             </motion.div>

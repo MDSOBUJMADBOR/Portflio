@@ -44,7 +44,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-28 pb-12 lg:pt-32 lg:pb-20 flex items-center px-[5%] bg-gradient-to-br from-[#F0F3FF] via-[#E8EDFF] to-[#F4F6FF] dark:from-[#0F1221] dark:via-[#161A2E] dark:to-[#0B0E1A] overflow-visible"
+      className="relative min-h-screen pt-28 pb-12 lg:pt-32 lg:pb-20 flex items-center px-[5%] bg-gradient-to-br from-[#181c2c] via-[#1e284e] to-[#172666] dark:from-[#0F1221] dark:via-[#161A2E] dark:to-[#0B0E1A] overflow-visible"
     >
       {/* Background Decors */}
       <div className="absolute top-0 right-0 max-w-[600px] max-h-[600px] bg-blue/10 dark:bg-blue/5 rounded-full blur-[120px] -z-10" />

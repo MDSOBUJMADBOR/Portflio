@@ -56,7 +56,7 @@ export default function Navbar() {
   if (!mounted) return null
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/60 dark:bg-[#090b14]/70 backdrop-blur-xl border-b border-gray-200/80 dark:border-white/10 shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.5)] h-[68px] px-6 md:px-8 flex items-center justify-between transition-all duration-300 max-w-full">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 dark:bg-[#090b14]/70 backdrop-blur-xl border-b border-gray-200/80 dark:border-white/10 shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.5)] h-[68px] px-6 md:px-8 flex items-center justify-between transition-all duration-300 max-w-full">
 
       {/* Logo */}
       <a href="#home" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
