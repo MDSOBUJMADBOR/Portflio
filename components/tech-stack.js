@@ -37,7 +37,7 @@ export default function TechStack() {
 
   return (
     <section id="tech" className="py-24 px-[5%] bg-[#0B0F19] text-white transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-full mx-auto">
         {/* Section Heading */}
         <div className="text-left mb-10">
           <div className="text-blue-500 font-bold text-[11px] uppercase tracking-[3px] mb-2">
