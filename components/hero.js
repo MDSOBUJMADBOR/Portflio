@@ -32,7 +32,7 @@ const techBadges = [
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", label: "Node.js" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", label: "Next.js" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", label: "MongoDB" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expressjs/expressjs-original.svg", label: "Express.js" },
+{ icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", label: "Express.js" },
 ]
 const smooch = Smooch_Sans({
   subsets: ["latin"],
@@ -115,7 +115,7 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   key={link.label}
                   href={link.href}
-                  className={`group relative w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-white hover:border-transparent ${link.hoverBg} ${link.hoverShadow} transition-all duration-300 hover:scale-110 active:scale-95`}
+                  className={`group relative w-12 h-12 rounded-2xl  bg-[#1E263B] border border-gray-700/60  flex items-center justify-center  hover:border-transparent ${link.hoverBg} ${link.hoverShadow} transition-all duration-300 hover:scale-110 active:scale-95`}
                 >
                   <link.icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
                   {/* Tooltip */}
@@ -186,7 +186,7 @@ export default function Hero() {
                     ease: "easeInOut"
                   }}
                   className={cn(
-                    "absolute bg-white/95 dark:bg-dark-2/95 backdrop-blur-lg p-2 rounded-2xl shadow-xl border border-white/20 flex flex-col items-center gap-1 z-30 min-w-[60px]",
+                    "absolute bg-[#1E263B] dark:bg-dark-2/95 backdrop-blur-lg p-2 rounded-2xl shadow-xl border border-white/20 flex flex-col items-center gap-1 z-30 min-w-[60px]",
                     positions[idx] || badge.pos
                   )}
                 >
