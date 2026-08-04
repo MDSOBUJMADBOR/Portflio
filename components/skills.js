@@ -183,7 +183,7 @@ export default function Skills() {
                     SSC – Humanities
                   </h3>
                   <p className="text-gray-400 text-sm">
-                    Mahmulpur Modern High School
+                    Mahmudpur Modern High School
                   </p>
                 </div>
 
