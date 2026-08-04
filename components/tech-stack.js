@@ -22,7 +22,7 @@ const techData = [
   { name: "Postman", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
   { name: "Vercel", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg", invert: true },
   { name: "VS Code", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-  { name: "ChatGPT", category: "AI & Prompts", icon: "https://cdn.simpleicons.org/openai/10a37f" },
+  { name: "ChatGPT", category: "AI & Prompts", icon: "https://unpkg.com/simple-icons@v11/icons/openai.svg" },
   { name: "Gemini", category: "AI & Prompts", icon: "https://cdn.simpleicons.org/googlegemini/8E75B2" },
 ];
 
@@ -36,24 +36,29 @@ export default function TechStack() {
   );
 
   return (
-    <section id="tech" className="py-24 px-[5%] bg-white dark:bg-[#0F1221] transition-colors duration-300 ">
-      <div className="max-w-full mx-auto">
+    <section id="tech" className="py-24 px-[5%] bg-[#0B0F19] text-white transition-colors duration-300">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Heading */}
         <div className="text-left mb-10">
-          <div className="text-gray-500 dark:text-gray-400 font-bold text-[10px] uppercase tracking-[3px] mb-3">My Toolkit</div>
-          <h2 className="font-syne text-3xl md:text-4xl font-extrabold text-dark dark:text-white">Technical Skills</h2>
+          <div className="text-blue-500 font-bold text-[11px] uppercase tracking-[3px] mb-2">
+            My Toolkit
+          </div>
+          <h2 className="font-syne text-3xl md:text-4xl font-extrabold text-white">
+            Technical Skills
+          </h2>
         </div>
 
         {/* Filter Navigation */}
-        <div className="flex flex-wrap items-center justify-between p-2 mb-10 bg-gray-100 dark:bg-[#161A2E] rounded-2xl w-full">
+        <div className="flex flex-wrap items-center justify-between p-1.5 mb-10 bg-[#151B2B] rounded-2xl w-full border border-gray-800/60">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 w-full sm:w-auto text-center",
+                "px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 w-full sm:w-auto text-center",
                 activeCategory === category
-                  ? "bg-white text-black shadow-sm"
-                  : "text-gray-500 dark:text-gray-400 hover:text-dark dark:hover:text-white"
+                  ? "bg-blue-600 text-white shadow-md shadow-blue-500/20"
+                  : "text-gray-400 hover:text-white hover:bg-gray-800/40"
               )}
             >
               {category}
@@ -62,7 +67,7 @@ export default function TechStack() {
         </div>
 
         {/* Tech Grid */}
-        <motion.div layout className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <motion.div layout className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           <AnimatePresence mode="popLayout">
             {filteredTech.map((tech) => (
               <motion.div
@@ -71,21 +76,21 @@ export default function TechStack() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
-                className="flex flex-col items-center justify-center p-6 rounded-2xl bg-gray-50 dark:bg-[#161A2E] hover:bg-gray-100 dark:hover:bg-[#1E2340] transition-all"
+                transition={{ duration: 0.25 }}
+                className="flex flex-col items-center justify-center p-6 rounded-2xl bg-[#151B2B] hover:bg-[#1E263B] border border-gray-800/50 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-1 group"
               >
-                <div className="w-10 h-10 mb-4 flex items-center justify-center">
+                <div className="w-10 h-10 mb-3 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                   {tech.LucideIcon ? (
-                    <tech.LucideIcon size={40} color={tech.color} strokeWidth={1.5} />
+                    <tech.LucideIcon size={38} color={tech.color} strokeWidth={1.5} />
                   ) : (
                     <img
                       src={tech.icon}
                       alt={tech.name}
-                      className={cn("w-full h-full object-contain", tech.invert && "dark:invert")}
+                      className={cn("w-full h-full object-contain", tech.invert && "invert")}
                     />
                   )}
                 </div>
-                <div className="text-xs font-semibold text-gray-700 dark:text-gray-300 text-center">
+                <div className="text-xs font-semibold text-gray-300 group-hover:text-white text-center">
                   {tech.name}
                 </div>
               </motion.div>

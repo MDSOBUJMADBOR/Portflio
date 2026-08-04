@@ -70,7 +70,7 @@ export default function Hero() {
             </div>
             <h1 className="font-syne text-[clamp(2.5rem,6vw,4.5rem)] font-semibold leading-[1.05] mb-4 text-dark dark:text-white">
               {/* Hi , I'm <span className="text-blue italic text-shadow-lg">SOBUJ MADBOR</span> */}
-              <span>MERN Stack</span><br></br>
+              <span className="text-blue">MERN Stack</span><br></br>
               <span className="bg-gradient-to-r from-blue to-cyan-400 bg-clip-text text-transparent">Developer</span>
 
             </h1>
@@ -101,7 +101,7 @@ export default function Hero() {
             </a>
             <a
               href="#projects"
-              className="flex items-center justify-center gap-3 px-8 py-4 border-2 border-gray-200 dark:border-white/10 hover:border-blue dark:hover:border-blue hover:text-blue text-dark dark:text-white rounded-2xl font-bold transition-all w-full sm:w-auto"
+              className="flex items-center justify-center gap-3 px-8 py-4 border-2 border-gray-200 dark:border-white/10 hover:border-blue dark:hover:border-blue hover:text-blue text-white rounded-2xl font-bold transition-all w-full sm:w-auto"
             >
               View My Project <MousePointer2 size={20} />
             </a>

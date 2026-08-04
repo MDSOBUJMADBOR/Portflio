@@ -54,7 +54,7 @@ export default function StatsBar() {
   return (
     <div
       ref={ref}
-      className="bg-white dark:bg-dark-2 py-8 sm:py-10 px-[5%] grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 shadow-sm"
+      className="bg-black text-white py-8 sm:py-10 px-[5%] grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 shadow-sm"
     >
       {stats.map((stat, idx) => (
         <motion.div
@@ -65,12 +65,12 @@ export default function StatsBar() {
           transition={{ duration: 0.5, delay: stat.delay }}
           className="flex items-center gap-4"
         >
-          <div className="w-12 h-12 rounded-xl bg-blue/5 dark:bg-blue/10 flex items-center justify-center text-blue">
+          <div className="w-12 h-12 rounded-xl  flex items-center justify-center text-blue">
             <stat.icon size={24} />
           </div>
 
           <div>
-            <div className="font-syne text-4xl font-extrabold text-dark dark:text-white leading-tight">
+            <div className="font-syne text-4xl font-extrabold text-white leading-tight">
               <Counter
                 target={stat.num}
                 suffix={stat.suffix}
@@ -78,7 +78,7 @@ export default function StatsBar() {
               />
             </div>
 
-            <div className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+            <div className="text-xs font-medium text-gray-400 uppercase tracking-wider">
               {stat.label}
             </div>
           </div>
