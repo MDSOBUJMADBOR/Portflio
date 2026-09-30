@@ -66,7 +66,7 @@ Madaripur Govt. College (2024 – Present)
 Madaripur Govt. College (2022 – 2024) — GPA: 4.17
 
 **📗 SSC (Humanities)**  
-Mahmulpur Modern High School (2020 – 2022) — GPA: 4.72
+Mahmudpur Modern High School (2020 – 2022) — GPA: 4.72
 
 ---
 
