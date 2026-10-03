@@ -166,7 +166,7 @@ Background
             >
               <span className="flex items-center gap-2">
                 <Sparkles className="h-3.5 w-3.5" />
-                View Project
+                View Details
               </span>
 
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -175,6 +175,32 @@ Background
         </motion.article>
       ))}
     </div>
+
+
+
+<div className="flex items-center justify-center mt-8">
+  <Link
+    href="https://github.com/MDSOBUJMADBOR"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-blue-400/50 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 px-6 py-3.5 text-sm font-semibold text-blue-300 shadow-[0_4px_20px_rgba(59,130,246,0.08)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:from-blue-500/20 hover:via-indigo-500/20 hover:to-purple-500/20 hover:text-white hover:shadow-[0_8px_30px_rgba(59,130,246,0.2)]"
+  >
+    {/* Animated Glow */}
+    <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+    <span className="relative flex items-center gap-2.5">
+      <Sparkles className="h-4 w-4 text-blue-400 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:text-purple-300" />
+      <span>View All Projects</span>
+    </span>
+
+    <span className="relative flex h-7 w-7 items-center justify-center rounded-lg border border-blue-400/20 bg-blue-500/10 transition-all duration-300 group-hover:border-blue-300/40 group-hover:bg-blue-500/20">
+      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+    </span>
+  </Link>
+</div>
+
+
+
 
     {/* =========================
         Bottom Note
