@@ -1,13 +1,13 @@
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
-import StatsBar from "@/components/stats-bar"
+// import StatsBar from "@/components/stats-bar"
 import About from "@/components/about"
 import TechStack from "@/components/tech-stack"
 import Skills from "@/components/skills"
 import Projects from "@/components/projects"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
-import ExperiencePage from "@/components/experience"
+// import ExperiencePage from "@/components/experience"
 
 
 export default function Home() {
@@ -16,11 +16,11 @@ export default function Home() {
       <Navbar />
    
       <Hero />
-      <StatsBar />
+      {/* <StatsBar /> */}
       <About />
       <TechStack />
       <Skills />
-      <ExperiencePage />
+      {/* <ExperiencePage /> */}
       <Projects />
       <Contact />
       <Footer />
