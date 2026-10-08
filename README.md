@@ -59,7 +59,6 @@ The website reflects my approach to modern web development, combining functional
 | React.js      | Component-based UI development         |
 | Next.js       | React framework and routing            |
 | JavaScript    | Application logic                      |
-| TypeScript    | Type-safe development where applicable |
 | HTML5         | Web page structure                     |
 | CSS3          | Styling                                |
 | Tailwind CSS  | Utility-first responsive styling       |
